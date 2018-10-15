@@ -3,9 +3,9 @@ Node.js tool for skiafy SVG files
 
 It mainly used in chromium development.
 
-At first, use svgo to optimize svg file. Then use
-skiafy to convert svg file to icon file. Finally,
-reference this icon in chromium.
+At first, use svgo to optimize svg file. 
+Then use skiafy to convert svg file to icon file. 
+Finally, reference this icon in chromium.
 
 ## Installation
 
