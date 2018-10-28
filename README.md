@@ -111,7 +111,8 @@ Arguments:
 
   ```sh
   $ skiafy -s "<svg..." -o /tmp/a.icon -i a.svg -o aa.icon \
-   -i - -o /tmp/stdin.icon -i /tmp/myfolder -o /tmp/yourfolder \
+   -i - -o /tmp/stdin.icon \
+   -i /tmp/myfolder -o /tmp/yourfolder \
    -o /tmp/outputfoder some.svg /tmp/test.svg
   ```
 
