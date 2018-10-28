@@ -110,15 +110,18 @@ Arguments:
 * With all of above
 
   ```sh
-  $ skiafy -s "<svg..." -o /tmp/a.icon -i a.svg -o aa.icon -i - -o /tmp/stdin.icon -i /tmp/myfolder -o /tmp/yourfolder -o /tmp/outputfoder some.svg /tmp/test.svg
+  $ skiafy -s "<svg..." -o /tmp/a.icon -i a.svg -o aa.icon -i - -o /tmp/stdin.icon -i /tmp/myfolder -o /tmp/yourfolder \
+   -o /tmp/outputfoder some.svg /tmp/test.svg
   ```
 
+  ```
   Converts:
     convert string to /tmp/a.icon;
     convert a.svg to aa.icon;
     read from stdin and output to /tmp/stdin.icon;
     convert all svg files in /tmp/myfolder and output icon files to /tmp/yourfolder;
     convert some.svg, /tmp/test.svg, output some.icon and test.icon to /tmp/outputfolder;
+  ```
 
 ## Reference
 
