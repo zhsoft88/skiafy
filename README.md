@@ -110,7 +110,8 @@ Arguments:
 * With all of above
 
   ```sh
-  $ skiafy -s "<svg..." -o /tmp/a.icon -i a.svg -o aa.icon -i - -o /tmp/stdin.icon -i /tmp/myfolder -o /tmp/yourfolder \
+  $ skiafy -s "<svg..." -o /tmp/a.icon -i a.svg -o aa.icon \
+   -i - -o /tmp/stdin.icon -i /tmp/myfolder -o /tmp/yourfolder \
    -o /tmp/outputfoder some.svg /tmp/test.svg
   ```
 
