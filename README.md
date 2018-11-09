@@ -143,5 +143,5 @@ FS.readFile('test.svg', 'utf8', function(err, data) {
 
 ## Reference
 
-[A little SVG to Skia converter tool](https://github.com/evanstade/skiafy)
+[A little SVG to Skia converter tool](https://github.com/evanstade/skiafy)<br/>
 [Node.js tool for optimizing SVG files](https://github.com/svg/svgo)
