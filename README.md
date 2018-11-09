@@ -125,6 +125,23 @@ Arguments:
     convert some.svg, /tmp/test.svg, output some.icon and test.icon to /tmp/outputfolder;
   ```
 
+### <abbr title="As Nodejs Module Interface">As Nodejs Module</abbr>
+
+```js
+const {skiafy} = require('skiafy')
+const FS = require('fs')
+
+FS.readFile('test.svg', 'utf8', function(err, data) {
+  if (err)
+    throw err
+
+  // usage: skiafy(svg, translateX = 0, translateY = 0, scaleX = 1, scaleY = 1)
+  const result = skiafy(data)
+  console.log(result)
+}
+```
+
 ## Reference
 
 [A little SVG to Skia converter tool](https://github.com/evanstade/skiafy)
+[Node.js tool for optimizing SVG files](https://github.com/svg/svgo)
