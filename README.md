@@ -24,6 +24,7 @@ Options:
      (for folder, convert all *.svg files to *.icon files)
   -o OUTPUT, --output=OUTPUT : Output file or folder, "-" for STDOUT
   -q, --quiet: Only show error messages
+  -e : Output END line (default: no)
 
 Arguments:
   INPUT : Alias to --input
@@ -128,15 +129,15 @@ Arguments:
 ### <abbr title="As Nodejs Module Interface">As Nodejs Module</abbr>
 
 ```js
-const {skiafy} = require('skiafy')
+const skiafy = require('skiafy')
 const FS = require('fs')
 
 FS.readFile('test.svg', 'utf8', function(err, data) {
   if (err)
     throw err
 
-  // usage: skiafy(svg, translateX = 0, translateY = 0, scaleX = 1, scaleY = 1)
-  const result = skiafy(data)
+  const options = {translateX: 0, translateY: 0, scaleX: 1, scaleY: 1, outputEnd: true}
+  const result = skiafy(data, options)
   console.log(result)
 }
 ```
