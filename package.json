@@ -1,6 +1,6 @@
 {
   "name": "skiafy",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Node.js based chromium devtools for converting SVG files to Skia Vector Icon files",
   "main": "./lib/skiafy.js",
   "bin": {
@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "jsdom": "*",
-    "svgo": "*"
+    "svgo": "*",
+    "parse-color": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
