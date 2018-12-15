@@ -9,8 +9,6 @@ $ [sudo] npm install -g skiafy
 
 ## Usage
 
-### <abbr title="Command Line Interface">CLI</abbr>
-
 ```
 Usage:
   skiafy [OPTIONS] [ARGS]
@@ -25,6 +23,7 @@ Options:
   -o OUTPUT, --output=OUTPUT : Output file or folder, "-" for STDOUT
   -q, --quiet: Only show error messages
   -e : Output END line (default: no)
+  -c : Output color (default: no)
 
 Arguments:
   INPUT : Alias to --input
@@ -126,6 +125,17 @@ Arguments:
     convert some.svg, /tmp/test.svg, output some.icon and test.icon to /tmp/outputfolder;
   ```
 
+* Output path color
+
+  ```sh
+  $ skiafy -c -o - a.svg
+  ......
+  NEW_PATH,
+  PATH_COLOR_ARGB, 0xFF, 0xFF, 0xAA, 0x00,
+  CIRCLE, 11.5, 11.5, 1.5
+  ......
+  ```
+
 ### <abbr title="As Nodejs Module Interface">As Nodejs Module</abbr>
 
 ```js
@@ -136,7 +146,7 @@ FS.readFile('test.svg', 'utf8', function(err, data) {
   if (err)
     throw err
 
-  const options = {translateX: 0, translateY: 0, scaleX: 1, scaleY: 1, outputEnd: true}
+  const options = {translateX: 0, translateY: 0, scaleX: 1, scaleY: 1, outputEnd: false, outputColor: true}
   const result = skiafy(data, options)
   console.log(result)
 }
